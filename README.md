@@ -17,3 +17,9 @@
   **Lesson** - Application Lesson
 
   **Users** - Users and User's Result
+
+## Dependencies
+
+  - corsheaders
+
+  - rest_framework
