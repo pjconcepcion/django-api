@@ -32,7 +32,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
   "localhost",
   "127.0.0.1",
-  "https://react-django.onrender.com/"
+  "https://react-django.onrender.com",
+  "https://django-api-tsjn.onrender.com"
 ]
 
 
