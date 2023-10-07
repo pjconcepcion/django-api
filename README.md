@@ -24,6 +24,8 @@
 
   - rest_framework
 
+  - python-dotenv
+
 ## Usage
 
   1. python3 manage.py migrate
