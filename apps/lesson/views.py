@@ -53,8 +53,8 @@ class LessonViewSet (viewsets.ModelViewSet):
       "answers": result
     }
 
-    # result_model = Result(user=None, lesson=lesson_model, score=score, is_passed=is_passed)
-    # result_model.save()
+    result_model = Result(user=None, lesson=lesson_model, score=score, is_passed=is_passed)
+    result_model.save()
 
     return Response(context)
 
