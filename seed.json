@@ -1,0 +1,253 @@
+[
+  {
+    "model": "lesson.basemodel",
+    "pk": 1,
+    "fields": {
+      "created_at": "2023-10-07T14:32:49.933Z",
+      "updated_at": "2023-10-07T14:32:49.933Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 2,
+    "fields": {
+      "created_at": "2023-10-07T14:33:04.866Z",
+      "updated_at": "2023-10-07T14:33:04.866Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 3,
+    "fields": {
+      "created_at": "2023-10-07T14:33:24.102Z",
+      "updated_at": "2023-10-07T14:33:24.102Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 4,
+    "fields": {
+      "created_at": "2023-10-07T14:33:33.178Z",
+      "updated_at": "2023-10-07T14:33:33.178Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 5,
+    "fields": {
+      "created_at": "2023-10-07T14:45:40.484Z",
+      "updated_at": "2023-10-07T14:45:40.484Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 6,
+    "fields": {
+      "created_at": "2023-10-07T14:45:55.654Z",
+      "updated_at": "2023-10-07T14:45:55.654Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 7,
+    "fields": {
+      "created_at": "2023-10-07T14:46:27.500Z",
+      "updated_at": "2023-10-07T14:46:27.500Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 8,
+    "fields": {
+      "created_at": "2023-10-07T14:46:35.140Z",
+      "updated_at": "2023-10-07T14:46:35.140Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 9,
+    "fields": {
+      "created_at": "2023-10-07T15:08:16.036Z",
+      "updated_at": "2023-10-07T15:08:16.036Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 10,
+    "fields": {
+      "created_at": "2023-10-07T15:08:37.566Z",
+      "updated_at": "2023-10-07T15:08:37.566Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 11,
+    "fields": {
+      "created_at": "2023-10-07T15:09:02.469Z",
+      "updated_at": "2023-10-07T15:09:02.469Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 12,
+    "fields": {
+      "created_at": "2023-10-07T15:09:16.033Z",
+      "updated_at": "2023-10-07T15:09:16.033Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 13,
+    "fields": {
+      "created_at": "2023-10-07T15:09:26.614Z",
+      "updated_at": "2023-10-07T15:09:26.614Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 14,
+    "fields": {
+      "created_at": "2023-10-07T15:09:44.598Z",
+      "updated_at": "2023-10-07T15:09:44.598Z"
+    }
+  },
+  {
+    "model": "lesson.basemodel",
+    "pk": 15,
+    "fields": {
+      "created_at": "2023-10-07T15:09:56.582Z",
+      "updated_at": "2023-10-07T15:09:56.582Z"
+    }
+  },
+  {
+    "model": "lesson.lesson",
+    "pk": 1,
+    "fields": {
+      "title": "Lesson #1",
+      "content": "Content of Lesson #1",
+      "passing_score": 2
+    }
+  },
+  {
+    "model": "lesson.lesson",
+    "pk": 5,
+    "fields": {
+      "title": "Lesson #2",
+      "content": "Lesson Content",
+      "passing_score": 3
+    }
+  },
+  {
+    "model": "lesson.question",
+    "pk": 2,
+    "fields": {
+      "lessons": 1,
+      "question_text": "Sample Question"
+    }
+  },
+  {
+    "model": "lesson.question",
+    "pk": 6,
+    "fields": {
+      "lessons": 1,
+      "question_text": "Question #2"
+    }
+  },
+  {
+    "model": "lesson.question",
+    "pk": 9,
+    "fields": {
+      "lessons": 5,
+      "question_text": "Lesson #2 Question #1"
+    }
+  },
+  {
+    "model": "lesson.question",
+    "pk": 10,
+    "fields": {
+      "lessons": 5,
+      "question_text": "Lesson #2 Question #2"
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 3,
+    "fields": {
+      "questions": 2,
+      "choice_text": "Choice #1",
+      "is_answer": true
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 4,
+    "fields": {
+      "questions": 2,
+      "choice_text": "Choice #2",
+      "is_answer": true
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 7,
+    "fields": {
+      "questions": 6,
+      "choice_text": "Answer for #2",
+      "is_answer": true
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 8,
+    "fields": {
+      "questions": 6,
+      "choice_text": "Not answer for #2",
+      "is_answer": false
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 11,
+    "fields": {
+      "questions": 9,
+      "choice_text": "Answer for #1",
+      "is_answer": true
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 12,
+    "fields": {
+      "questions": 9,
+      "choice_text": "Answer for #1 again",
+      "is_answer": true
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 13,
+    "fields": {
+      "questions": 9,
+      "choice_text": "Not answer for",
+      "is_answer": false
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 14,
+    "fields": {
+      "questions": 10,
+      "choice_text": "Answer for #2",
+      "is_answer": true
+    }
+  },
+  {
+    "model": "lesson.choice",
+    "pk": 15,
+    "fields": {
+      "questions": 10,
+      "choice_text": "Not the answer",
+      "is_answer": false
+    }
+  }
+]
