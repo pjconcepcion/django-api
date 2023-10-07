@@ -23,3 +23,11 @@
   - corsheaders
 
   - rest_framework
+
+## Usage
+
+  1. python3 manage.py migrate
+
+  2. python3 manage.py loaddata seed.json
+
+  3. python3 manage.py test
