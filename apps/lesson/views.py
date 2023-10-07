@@ -1,8 +1,11 @@
 from rest_framework import viewsets
+from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 from rest_framework.decorators import action
 
 from apps.users.models.results import Result
+from apps.users.models.users import Users
+
 from .models.lesson import Lesson
 from .models.question import Question
 from .models.choice import Choice
@@ -13,11 +16,17 @@ class QuestionViewSet (viewsets.ModelViewSet):
   queryset = Question.objects.all();  
   serializer_class = question.QuestionSerializer
 
+
 class ChoiceViewSet (viewsets.ModelViewSet):
   queryset = Choice.objects.all();  
   serializer_class = choice.ChoiceSerializer
 
+  def get_result(self, object):
+    print(object)
+    return 
+
 class LessonViewSet (viewsets.ModelViewSet):
+  parser_classes = [JSONParser]
   queryset = Lesson.objects.all()
   serializer_class = lesson.LessonSerializer
 
@@ -27,19 +36,13 @@ class LessonViewSet (viewsets.ModelViewSet):
     methods=["POST"]
   )
   def submit(self, request, pk=None):
-    data = request.body
+    data = request.data
     score = 0
-    result = {}
 
-    for question in data:
-      answer = data[question]
+    for question in data['answers']:
+      answer = data['answers'][question]
       choice_results_set = Choice.objects.filter(questions=question, is_answer=True)
       correct_answer = [str(c.id) for c in choice_results_set]
-
-      result[question] = {
-        "answers": answer,
-        "correct": correct_answer
-      }
       if (correct_answer == answer):
         score = score + 1
     
@@ -48,11 +51,11 @@ class LessonViewSet (viewsets.ModelViewSet):
     context = {
       "score": score,
       "passing_score": lesson_model.passing_score,
-      "result": "Fail" if is_passed else "Pass",
-      "answers": result
+      "result": "Fail" if is_passed else "Pass"
     }
 
-    result_model = Result(user=None, lesson=lesson_model, score=score, is_passed=is_passed)
+    user = Users.objects.get_or_create(username=data['username'])
+    result_model = Result(user=user[0], lesson=lesson_model, score=score, is_passed=is_passed)
     result_model.save()
 
     return Response(context)
