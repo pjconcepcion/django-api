@@ -2,8 +2,12 @@ import json
 
 def RequestMiddleware (get_response):
   def middleware (request):
-    if request.body:
-      request._body = json.loads(request.body)
+    try: 
+      if request.body:
+        body = request.body
+        request._body = json.loads(body)
+    except:
+      request._body = request.body
 
     return get_response(request)
   
