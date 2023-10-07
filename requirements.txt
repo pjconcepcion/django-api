@@ -1,0 +1,3 @@
+corsheaders
+rest_framework
+python-dotenv
